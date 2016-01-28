@@ -1,18 +1,27 @@
 <?php
-include_once('controller/PostController.php');
 
 if(!empty($_SERVER['QUERY_STRING'])) {
-    $queryArray = explode('/',$_SERVER['QUERY_STRING']);
     
-    $controller = new $queryArray[0];
+    $queryArray = explode('/',$_SERVER['QUERY_STRING']);
 
-    if(isset($queryArray[2])) {
-        $controller->$queryArray[1]($queryArray[2]);
-    }
-    else {
-        $controller->$queryArray[1]();
-    }
+    $controllerFile = 'controller/' . $queryArray['0'] . '.php';
+
+} else {
+    $controllerFile = 'controller/DefaultController.php';
 }
 
-echo '<a href="index.php?PostController/index">Ver Todos os Posts!</a>';
-?> 
+include_once($controllerFile);
+
+$controller = (isset($queryArray['0'])) ? new $queryArray['0'] : new DefaultController;
+
+if (isset($queryArray['1'])) {
+    
+    $action = $queryArray['1'];
+
+    if(isset($queryArray['2'])) {
+        $controller->$action($queryArray['2']);
+    } else {
+        $controller->$action();
+    }
+}
+?>
