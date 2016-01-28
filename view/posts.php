@@ -30,7 +30,7 @@
         <h3><a href="#"><?=strtoupper($posts[$p]['title'])?></a>
         </h3>
         <p>by <a href="#">Litte Lite MVC Example</a></p>
-        <p><?=$post['body']?></p>
+        <p><?=$posts[$p]['body']?></p>
         <a class="btn btn-primary" href="#">Read More <i class="fa fa-angle-right"></i></a>
     </div>
 </div>
