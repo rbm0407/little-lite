@@ -12,7 +12,7 @@
             <li>Simple MVC PHP core</li>
             <li>Layout development in Bootstrap v3</li>
             <li>Sample JSON data provided by <a href="http://jsonplaceholder.typicode.com/">JSON Placeholder</a></li>
-            <li>Sampole images provided by <a href="http://loremflickr.com">Loren Flicker</a></li>
+            <li>Sample images provided by <a href="http://loremflickr.com">Loren Flicker</a></li>
         </ul>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
     </div>

@@ -22,7 +22,7 @@ class PostController
     }
 
     public function postView($id) {
-        $this->view->assign('', $this->model->getPostByID($id));
+        $this->view->assign('posts', $this->model->getPostByID($id));
         $this->view->display('view');
     }
 }
